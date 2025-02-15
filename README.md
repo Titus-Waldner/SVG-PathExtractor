@@ -10,6 +10,6 @@ Features
     Extracts SVG commands (rectangles, circles, ellipses, lines, and paths).
     Generates a structured output file with sampled coordinates.
     
-  ![test](https://github.com/user-attachments/assets/87196a3e-81a9-4fec-a83a-37265b586740)
+![test](https://github.com/user-attachments/assets/87196a3e-81a9-4fec-a83a-37265b586740)
 
-  ![Image,notSVG](https://github.com/user-attachments/assets/c9a3b5f2-ac72-4e30-a320-b032984c51f1)
+![Figure_1](https://github.com/user-attachments/assets/d1d454e0-8045-4235-98c6-58a3a41a91e2)
