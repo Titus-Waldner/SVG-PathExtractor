@@ -1,3 +1,14 @@
+"""
+command.py
+
+This module defines the SVGParser class which extracts drawing commands from an SVG file.
+It supports various SVG elements including rectangles, circles, ellipses, lines, and paths.
+Circles and ellipses are approximated by converting them into line segments, and the resulting
+commands are written to an output file in a human-readable format.
+"""
+
+
+
 import xml.etree.ElementTree as ET
 import math
 
@@ -83,7 +94,10 @@ class SVGParser:
 
             for line in root.findall(".//svg:line", self.namespace):
                 x1, y1, x2, y2 = line.get("x1"), line.get("y1"), line.get("x2"), line.get("y2")
-                f.write(f"Line: ({x1}, {y1}) -> ({x2}, {y2})\n")
+                # Write it as an actual path definition with M (move-to) then L (line-to)
+                d = f"M {x1},{y1} L {x2},{y2} Z"  # Z ensures a pen-lift at the end
+                f.write(f'"{d}"\n')              # wrap in quotes so load_svg_path_strings picks it up
+
 
             for path in root.findall(".//svg:path", self.namespace):
                 d = path.get("d", "")
@@ -92,5 +106,5 @@ class SVGParser:
         print(f"SVG commands extracted to {self.output_file}")
 
 # Example usage:
-# parser = SVGParser("input.svg")
-# parser.parse_svg()
+parser = SVGParser("smile_face.svg")
+parser.parse_svg()
