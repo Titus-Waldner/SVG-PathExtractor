@@ -12,4 +12,4 @@ Features
     
 ![test](https://github.com/user-attachments/assets/87196a3e-81a9-4fec-a83a-37265b586740)
 
-![Figure_1](https://github.com/user-attachments/assets/d1d454e0-8045-4235-98c6-58a3a41a91e2)
+![Detailed_Path](https://github.com/user-attachments/assets/b52fd181-ddbb-47ad-b137-bb14a737ac6c)
